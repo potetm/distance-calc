@@ -1,5 +1,3 @@
-#!/usr/bin/env groovy
-
 @Grab('org.codehaus.groovy.modules.http-builder:http-builder:0.5.2')
 @Grab('net.sf.opencsv:opencsv:2.3')
 
