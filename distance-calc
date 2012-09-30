@@ -1,0 +1,22 @@
+#!/usr/bin/env sh
+
+PRG_DIR="`dirname "$0"`"
+PRG='distance-calc.groovy'
+
+fail ( ) {
+	echo "$*" >&2
+	exit 1
+}
+
+# This is a rather superficial check, but it can always be made more robust in the future
+GROOVY_COMMAND=`which groovy`
+
+if [ -z $GROOVY_COMMAND ]; then
+	if [ -z $GROOVY_HOME ]; then
+		fail "Error: Groovy is not currently installed"
+	fi
+
+	GROOVY_COMMAND="$GROOVY_HOME/bin"
+fi
+
+"$GROOVY_COMMAND" "$PRG" "$@"
