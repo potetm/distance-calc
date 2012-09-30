@@ -30,6 +30,8 @@ def getDistance = { origin, destination ->
 
 def sum = 0
 args.each { file ->
+	println "Working on ${file}"
+
 	def fileSum = 0
 	List<String[]> rows = new CSVReader(new FileReader(new File(file))).readAll()
 
@@ -41,7 +43,7 @@ args.each { file ->
 		fileSum += distance
 	}
 	
-	println "File Total: ${fileSum}"
+	println "File Total: ${fileSum}\n"
 }
 
 println "Grand Total: ${sum}"
