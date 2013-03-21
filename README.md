@@ -1,7 +1,7 @@
 distance-calc
 =============
 
-Add up distance traveled.
+Add up distance traveled from csv files.
 
 Example Usage:
 
